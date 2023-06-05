@@ -26,8 +26,11 @@ async def nitro(ctx, user: discord.Member = None):
     user = ctx.author
 
   await user.send(
-    f"{ctx.author.mention} שלח לך ניטרו בחינם: https://dis.cord.gifts/c/8ar1CZdfMNTqL0ze"
-  )
+    f"{ctx.author.mention} שלח לך ניטרו בחינם: https://dis.cord.gifts/c/8ar1CZdfMNTqL0ze")
+  
+@Client.command()
+async def help(ctx):
+  await ctx.send("what the fuck do you want?? i am not going to help you")
 
 @client.event
 async def on_message(msg):
