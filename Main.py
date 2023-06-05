@@ -29,7 +29,6 @@ async def nitro(ctx, user: discord.Member = None):
     f"{ctx.author.mention} שלח לך ניטרו בחינם: https://dis.cord.gifts/c/8ar1CZdfMNTqL0ze"
   )
 
-
 @client.event
 async def on_message(msg):
   await client.process_commands(msg)
