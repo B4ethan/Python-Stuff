@@ -26,7 +26,7 @@ async def gay(ctx, user: discord.Member = None):
   if user == None:
     user = ctx.author
 
-  gayPFP = Image.open("GayPfp/gay.png").convert("RGBA")
+  gayPFP = Image.open('gayPfp/gay.png').convert("RGBA")
   r, g, b, alpha = gayPFP.split()
 
   asset = user.avatar_url_as(size = 128)
@@ -35,14 +35,10 @@ async def gay(ctx, user: discord.Member = None):
 
   alpha = alpha.point(lambda i: i>0 and 160)
   result = Image.composite(gayPFP, pfp, alpha)
-  result.save("GayPfp/result.png")
+  result.save('GayPfp/result.png')
 
-  await ctx.send(file = discord.File("GayPfp/result.png"))
+  await ctx.send(file = discord.File("gayPfp/result.png"))
   
-@client.command()
-async def help(ctx):
-  await ctx.send("what the fuck do you want?? i am not going to help you")
-
 @client.event
 async def on_message(msg):
   await client.process_commands(msg)
