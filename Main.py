@@ -1,7 +1,8 @@
 import random
 import discord
 from discord.ext import commands
-
+from PIL import Image, ImageEnhance, ImageOps, ImageDraw, ImageFilter
+from io import BytesIO
 
 client = commands.Bot(command_prefix='!', intents=discord.Intents.all())
 
@@ -21,12 +22,22 @@ async def porn(ctx):
 
 
 @client.command()
-async def nitro(ctx, user: discord.Member = None):
+async def gay(ctx, user: discord.Member = None):
   if user == None:
     user = ctx.author
 
-  await user.send(
-    f"{ctx.author.mention} שלח לך ניטרו בחינם: https://dis.cord.gifts/c/8ar1CZdfMNTqL0ze")
+  gayPFP = Image.open("GayPfp/gay.png").convert("RGBA")
+  r, g, b, alpha = gayPFP.split()
+
+  asset = user.avatar_url_as(size = 128)
+  data = BytesIO(await asset.read())
+  pfp = Image.open(data).resize(gayPFP.size)
+
+  alpha = alpha.point(lambda i: i>0 and 160)
+  result = Image.composite(gayPFP, pfp, alpha)
+  result.save("GayPfp/result.png")
+
+  await ctx.send(file = discord.File("GayPfp/result.png"))
   
 @client.command()
 async def help(ctx):
