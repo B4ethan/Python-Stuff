@@ -1,7 +1,7 @@
-import os
-import discord
-from discord.ext import commands, tasks
 import random
+import discord
+from discord.ext import commands
+
 
 client = commands.Bot(command_prefix='!', intents=discord.Intents.all())
 
@@ -28,7 +28,7 @@ async def nitro(ctx, user: discord.Member = None):
   await user.send(
     f"{ctx.author.mention} שלח לך ניטרו בחינם: https://dis.cord.gifts/c/8ar1CZdfMNTqL0ze")
   
-@Client.command()
+@client.command()
 async def help(ctx):
   await ctx.send("what the fuck do you want?? i am not going to help you")
 
