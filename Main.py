@@ -1,6 +1,6 @@
 import random
 import discord
-from discord.ext import commands
+from discord.ext import commands, tasks
 from PIL import Image, ImageEnhance, ImageOps, ImageDraw, ImageFilter
 from io import BytesIO
 
@@ -23,21 +23,24 @@ async def porn(ctx):
 
 @client.command()
 async def gay(ctx, user: discord.Member = None):
-  if user == None:
-    user = ctx.author
+  if user is None:
+     user = ctx.author
 
   gayPFP = Image.open('gayPfp/gay.png').convert("RGBA")
   r, g, b, alpha = gayPFP.split()
 
-  asset = user.avatar_url_as(size = 128)
-  data = BytesIO(await asset.read())
-  pfp = Image.open(data).resize(gayPFP.size)
+  if user.avatar is None:
+    await ctx.send(f"The user {user.mention} doesnt have a profile picture you peace of shit!")
+    return
+  
+  avatar_bytes = await user.avatar.with_format("png").read()
+  pfp = Image.open(BytesIO(avatar_bytes)).resize(gayPFP.size)
 
-  alpha = alpha.point(lambda i: i>0 and 160)
+  alpha = alpha.point(lambda i: i > 0 and 160)
   result = Image.composite(gayPFP, pfp, alpha)
-  result.save('GayPfp/result.png')
+  result.save('gayPfp/result.png')
 
-  await ctx.send(file = discord.File("gayPfp/result.png"))
+  await ctx.send(file=discord.File("gayPfp/result.png"))
   
 @client.event
 async def on_message(msg):
@@ -46,10 +49,10 @@ async def on_message(msg):
   if msg.author == client.user:
     return
 
-  if msg.content.startswith("hello"):
+  if msg.content.startswith("hello") or msg.content.startswith("Hello"):
     await msg.channel.send("shut the fuck up")
 
-  if msg.content.startswith("give me a slap"):
+  if msg.content.startswith("give me a slap") or msg.content.startswith("Give me a slap"):
     await msg.channel.send("oh yeah baby")
 
 
