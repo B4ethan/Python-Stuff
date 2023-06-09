@@ -3,6 +3,7 @@ import discord
 from discord.ext import commands, tasks
 from PIL import Image, ImageEnhance, ImageOps, ImageDraw, ImageFilter
 from io import BytesIO
+import requests
 
 client = commands.Bot(command_prefix='!', intents=discord.Intents.all())
 
@@ -12,6 +13,40 @@ async def on_ready():
   await client.change_presence(activity=discord.Activity(
     type=discord.ActivityType.watching, name="you from the walls"))
   print(f"{client.user} is ready")
+
+
+def searchGif(keyWord):
+  #generating a random gif based on the give keyword
+  apiKey = "6AF20RsShIhtPx2YFuJtIU4h5ZzlEHXK"
+  endPoint = "https://api.giphy.com/v1/gifs/random"
+  params = {
+    "apiKey": apiKey, "tag": keyWord
+  }
+
+  response = requests.get(endPoint, params=params)
+  data = response.json()
+
+  if response.status_code == 200:
+    if data["data"]:
+      gifURL = data["data"]["images"]["original"]["url"]
+      return gifURL
+    else:
+      return None
+  else:
+    return None
+
+
+@client.command()
+async def gif(ctx, keyWord):
+  if keyWord == None:
+    keyWord = "random"
+
+  gifURL = searchGif(keyWord)
+
+  if gifURL:
+    await ctx.send(f"here is your fucking gif {gifURL}")
+  else:
+    await ctx.send("if found nothing you little shit")
 
 
 @client.command()
