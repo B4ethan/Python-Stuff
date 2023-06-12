@@ -37,7 +37,7 @@ def searchGif(keyWord):
 
 
 @client.command()
-async def gif(ctx, keyWord):
+async def gif(ctx, keyWord = None):
   if keyWord == None:
     keyWord = "random"
 
@@ -89,6 +89,9 @@ async def on_message(msg):
 
   if msg.content.startswith("give me a slap") or msg.content.startswith("Give me a slap"):
     await msg.channel.send("oh yeah baby")
+
+  if msg.content.startswith("Hoshen") or msg.content.startswith("hoshen") or msg.content.startswith("חשן"):
+    await msg.channel.send("אמא שלך")
 
 
 client.run(
