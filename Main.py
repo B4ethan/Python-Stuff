@@ -4,6 +4,7 @@ from discord.ext import commands, tasks
 from PIL import Image, ImageEnhance, ImageOps, ImageDraw, ImageFilter
 from io import BytesIO
 import requests
+import pyttsx3
 
 client = commands.Bot(command_prefix='!', intents=discord.Intents.all())
 
@@ -13,6 +14,16 @@ async def on_ready():
   await client.change_presence(activity=discord.Activity(
     type=discord.ActivityType.watching, name="you from the walls"))
   print(f"{client.user} is ready")
+
+
+@client.command()
+async def copyText(ctx, *, msg = None):
+  if msg == None:
+    msg = "none"
+
+  await ctx.send(msg)
+
+
 
 
 def searchGif(keyWord):
