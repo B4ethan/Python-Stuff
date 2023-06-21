@@ -4,7 +4,7 @@ from discord.ext import commands, tasks
 from PIL import Image, ImageEnhance, ImageOps, ImageDraw, ImageFilter
 from io import BytesIO
 import requests
-import pyttsx3
+from gtts import gTTS
 
 client = commands.Bot(command_prefix='!', intents=discord.Intents.all())
 
@@ -24,6 +24,15 @@ async def copyText(ctx, *, msg = None):
   await ctx.send(msg)
 
 
+@client.command()
+async def say(ctx, *, text =None):
+  if text == None:
+    text = "you peace of shit write someting, done leave it empty"
+
+  speech = gTTS(text = text, lang = "en")
+  speech.save("sayCommand/result.mp3")
+
+  await ctx.send(file = discord.File("sayCommand/result.mp3"))
 
 
 def searchGif(keyWord):

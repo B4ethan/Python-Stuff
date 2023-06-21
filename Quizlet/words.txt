@@ -1,0 +1,440 @@
+1. concentration n: a large amount of people or things in one place
+2. carefully adv: By thinking about what you are doing, not to make mistakes; By giving a lot of attention to details
+3. characteristic n+adj: very typical of somebody; a quality typical of someone
+4. claim v+n: say something is true; statement that something is true
+5. combine v: join or mix two or more things together
+6. community n: all the people living in a particular area when considered a group
+7. completely adv: in every way; fully; totally
+8. complex adj: made up of several connected parts and often difficult to understand
+9. concentrate v: give all your attention to something; ability to give your attention to something
+10. concept n: an idea; a basic principle
+11. concerned adj: worried about something
+12. conduct v: organize and do something, especially research; stand in front of orchestra and direct players
+13. constant adj: happening or existing all the time or again and again
+14. constantly adv: always; again and again
+15. cooperate v: work together with someone else to achieve something
+16. cooperation n: working together with someone else to achieve something
+17. discovery n: the act of finding something
+18. easily adv: without difficulty
+19. employ v: pay someone to work for you
+20. emphasise v: give special importance to something
+21. emphasis n: force given to word when speaking; Giving special importance to
+22. enable v: make it possible for someone/thing to do something
+23. entire adj: whole or complete
+24. entirely adv: completely
+25. equipment n: things needed to do a particular activity
+26. establish v: start or create an organization, system
+27. factory n: building/s where goods are made in large quantities
+28. concern n: something that causes worry
+29. encounter v: meet unexpectedly
+30. confirm v: make sure
+31. select v: choose someone or something
+32. use v: do something with machine, object for particular purpose
+33. revise: study before a test
+34. need v: have to / be obliged to
+35. hero n: person who is admired for having done something difficult
+36. fee n: amount of money you pay for something
+37. head n: person in charge or leader of a group
+38. expert n: person with a lot of special knowledge
+39. goal n: your purpose or aim
+40. hole n: an empty space in something
+41. display v: show people new things or places
+42. guide v: help person or group of people find the way
+43. land v: arrive on a plane
+44. surround v: be or go all around something or someone
+45. mean v: want or intend to say something
+46. invent v: create something for the first time
+47. guard n: person who protects a place or people
+48. difficulty n: a problem in doing or understanding something
+49. difference n: the way people or things are not the same
+50. event n: something important that happens
+51. to run out of: not having enough left
+52. take advantage of: make good or full use of something
+53. set out v: begin a journey
+54. keep on doing something: continue
+55. consist of v: be formed or made up of
+56. care for v: look after somebody
+57. detail n: one fact or piece of information
+58. route n: a way from one place to another
+59. product n: something that is made
+60. relative n: a member of your family
+61. quality n: how good or bad something is
+62. progress n: movement forward or towards achieving something
+63. demonstrate v: show something clearly
+64. damage v: spoil or harm something
+65. construct v: build or make something
+66. decrease v: make something smaller
+67. refuse v: say no
+68. criticize v: Say what is bad or wrong with someone/something
+69. rock n: hard, solid material that forms part of earth's surface
+70. scenery n: natural and beautiful things to see in an area
+71. section n: one part of something
+72. value n: how much something is worth
+73. stress n: a feeling of worry caused by problems
+74. series n: a number of things that happen one after the other and are connected
+75. plant v: put plants or seeds in ground to grow
+76. predict v: to say what you think will happen
+77. insist v: to say strongly that you or someone else must have or do something
+78. approve v: to accept or allow something
+79. direct v: point or send something towards somebody/something
+80. flow v: to move smoothly
+81. carry on v: to continue
+82. end up v: find yourself in place/situation you did not plan or expect
+83. keep up with v: To move at the same speed as someone
+84. figure out v: to understand
+85. shut down v: to make something stop working
+86. take for granted v: to accept something as being true
+87. consist of v: have two or more things inside
+88. develop v: grow slowly, increase into something else
+89. hand v: give something to someone
+90. consider v: think about something carefully
+91. publish v: make known to the public
+92. avoid v: stay away from
+93. benefit n: advantage or useful effect something has
+94. consequence n: something that follows as a result of something else
+95. edge n: place where something ends
+96. experiment n: test to study what happens or learn something new
+97. knowledge n: information you have in your mind
+98. decision n: choice you make after thinking about something
+99. hopeful adj: believing that something you want will happen
+100. local adj: in an area near you
+101. weak adj: not good at something
+102. skilled adj: having ability to do something well
+103. instant adj: happening suddenly or immediately
+104. familiar adj: well known to you
+105. organization n: group of people who work together
+106. pleasure n: a feeling of happiness
+107. metal n: a solid substance, usually hard and shiny that heat can travel through
+108. lawyer n: a person who gives legal advice
+109. ocean n: sea
+110. permission n: act of allowing someone to do something
+111. no such thing: it doesn't exist
+112. out of date: not fashionable
+113. in full: completely
+114. straight away: immediately
+115. in that case: if that happens
+116. in advance: ahead of time
+117. research n: a careful study of something to find out more about it
+118. profession n: a job that needs a high level of training / education
+119. possibility n: fact that something might exist or happen, but is not likely to
+120. vehicle n: a bus or car that takes people from one place to another
+121. variety n: many different types of the same thing
+122. region n: an area of land
+123. recall v: remember
+124. occur v: happen
+125. promise v: say you will do or not do something
+126. rely v: need someone/thing and not be able to live or work without him/it
+127. separate v: to cause people or things to stop being together
+128. recommend v: say something is good and worthwhile trying
+129. directly adv: in a direct line or way
+130. frequently adv: often
+131. totally adv: completely
+132. mostly adv: in almost every case
+133. naturally adv: of course, as you would expect
+134. currently adv: at the present time
+135. disease n: an illness in the body of humans, animals or plants
+136. safety n: state of not being in danger
+137. error n: mistake
+138. option n: a choice
+139. salary n: money you receive for doing your job
+140. owner n: a person to whom things belong
+141. go into v: discuss or explain something
+142. result in v: cause something to happen
+143. make a difference v: have an effect on something / one
+144. cope with v: deal successfully with difficult matter or situation
+145. take up v: start doing something
+146. come across v: meet someone or find something by chance
+147. quantity n: the amount or number of something
+148. volunteer n: someone who works without getting paid
+149. project n: a planned piece of work
+150. investigation n: an official examination of the facts about a situation or crime
+151. system n: set of ideas or rules for organising something
+152. importance n: being of great value or influence
+153. exist v: to be real, to live
+154. explore v: travel somewhere new in order to learn about it
+155. contain v: have something inside or as part of itself
+156. guess v: give an answer without knowing all the facts
+157. generate v: produce or create something
+158. permit v: allow someone to do something
+159. challenge n: something that is hard to do
+160. youth n: period in your life when you are young
+161. planet n: large round object in space that moves around another star
+162. tradition n: way of doing things
+163. winner n: person or animal that comes first in competition
+164. truth n: the real facts about something from the past to the present
+165. occasionally adv: sometimes but not often
+166. unfortunately adv: that you feel sorry about
+167. typically adv: that usually happens in this way
+168. otherwise adv: apart from that
+169. partly adv: not completely
+170. nevertheless adv: in spite of that
+171. out of date: old or old fashioned
+172. as a matter of fact: to tell the truth
+173. it's a good thing: to be lucky that
+174. in practice: in reality
+175. it would appear that: it seems that
+176. on the contrary: the opposite of what was said or written
+177. intend v: plan to do something
+178. face v: deal with something unpleasant
+179. inform v: tell someone about something
+180. prevent v: stop something from happening
+181. react v: do or say something because of something said or that happened
+182. investigate v: try to find out all the facts about something
+183. movement n: the act of changing position
+184. way n: a particular method of doing something
+185. instruction n: information about how to do something
+186. preparation n: the act of getting ready for something
+187. proposal n: suggestion or plan
+188. zone n: area that is different from those around it
+189. principal adj: the main idea or most important thing
+190. typical adj: having usual qualities of person, thing or type
+191. probable adj: that you expect to happen or to be true
+192. relevant adj: very useful or important
+193. additional adj: extra
+194. valuable adj: worth a lot of money
+195. sample n: small amount of something to find out what the rest is like
+196. surface n: the top part of something
+197. success n: fact you achieved what you want
+198. trend n: a general change or development
+199. travel n: going on a journey from place to place
+200. method n: a certain way of doing something
+201. Even: equal, with one side being as good as the other
+202. Normally: usually
+203. Whereas: for showing a fact that is different
+204. Possibly: when something might happen
+205. previously: coming or happening before or earlier
+206. Readily: quickly and easily
+207. Industry n: The production of goods in factories
+208. range n: a variety of things that belong to the same group
+209. population n: all of the people who live in a certain area
+210. psychology n: the study of how people think and behave
+211. evidence n: the facts that show something is true
+212. rate n: number of times something happens during a particular time
+213. protest v: show that you do not approve of or agree with something
+214. assume v: think that something is true without all the facts
+215. design v: plan and make a drawing of hoe something will be made
+216. persuade v: get someone to agree to do something
+217. block v: make it difficult or impossible for someone to pass
+218. manufacture v: make something usually in large amounts
+219. change n: something new or different
+220. confidence n: a strong feeling that you can do something really well
+221. landscape n: everything you can see when you look across large area of land
+222. efficiency n: a good use of time or energy
+223. device n: tool or piece of equipment made for particular purpose
+224. conclusion: opinion that you reach after thinking about something carefully
+225. required adj: needed or necessary
+226. beneficial adj: helpful
+227. traditional adj: done as a custom or belief that has continued for generations
+228. central adj: near the middle point / chief, main, most important
+229. significant adj: important
+230. optional adj: that you can choose or not choose
+231. in the short term: over a short period of time in the future
+232. in the long term: over a long period of time in the future
+233. on average: usually or generally
+234. in the first place: firstly
+235. regardless of: paying no attention to
+236. provided that: only if
+237. scientific adj: connected with the study of the physical world and natural laws
+238. previous adj: coming or happening before or earlier
+239. successful adj: having achieved what you wanted
+240. permanent adj: for a long time or forever
+241. reasonable adj: big enough or good enough
+242. unable adj: not having the time or knowledge to do something
+243. produce v: grow or make something
+244. estimate v: calculate the size, cost, etc. of something approximately
+245. reduce v: make something smaller
+246. survey v: look carefully at the whole of something
+247. participate v: take part in an activity with other people
+248. prepare v: get ready or make something/somebody ready
+249. eventually adv: at the end of a long time
+250. nearly adv: almost but not completely
+251. relatively adv: especially when compared to others
+252. slightly adv: a little or to a small degree
+253. instantly adv: without delay; immediately
+254. consequently adv: following as the result of something else
+255. truth n: a fact or an idea that is believed to be so by most people
+256. requirement n: something that is needed
+257. skill n: the ability to do something well
+258. reaction n: what you do or say because of something that has happened
+259. transport n: carrying or taking people or goods from one place to another
+260. regulation n: an official rule that people must follow
+261. about to do something: be close to doing something
+262. except that: apart from the fact that
+263. common sense: natural ability to make good decisions
+264. concerned with: worried about something
+265. in the long run: at some time in the future or in the end
+266. aimed at: be intended to achieve something
+267. collection n: a group of the same types of things
+268. lack n: not having something or not having enough of it
+269. scientist n: person who studies subjects like biology, chemistry, or physics
+270. prediction n: saying what you think will happen
+271. solution n: a way of solving a problem
+272. oppose v: strongly disagree with someone
+273. measure v: find size, weight, quantity, etc. using an instrument
+274. supply v: give people things that they want or need
+275. require v: need something
+276. propose v: formally suggest something as a plan of action
+277. reject v: refuse to accept
+278. beneficial adj: having a good or useful effect
+279. central adj: most important; main
+280. detailed adj: with a lot of information
+281. creative adj: using skill or imagination to create new things
+282. essential adj: very important and necessary
+283. environmental adj: relating to the natural world
+284. frequent adj: happening often
+285. negative adj: bad or harmful to someone or something
+286. suitable adj: right for somebody or something
+287. current adj: of the present time
+288. personal adj: of or belonging to someone particular
+289. temporary adj: Only for a short time
+290. Despite: without being affected by the thing mentioned
+291. Regarding: about or in connection with
+292. supposed to: be expected to do
+293. old fashioned: not modern
+294. in contrast to: not like something else
+295. just about: Almost
+296. prevention n: a way of stopping something from happening
+297. salary n: the money you receive for the work you do
+298. promise n: statement that you will or will not do something
+299. interest n: wanting to know about something or someone
+300. error n: Mistake
+301. quantity n: number or amount of something
+302. proposal n: a suggestion or a plan
+303. natural adj: Normal
+304. reliable adj: that you can trust
+305. short-term adj: not for a long time
+306. visible adj: that you can see feeling
+307. unlikely adj: probably not going to happen
+308. confident adj: that you are sure about your own abilities
+309. essentially adv: considering the basic or most important part
+310. particularly adv: very or especially
+311. necessarily adv: about something that has to happen
+312. typically adv: usually or commonly
+313. currently adv: at present; at the moment
+314. in detail: thoroughly, including everything
+315. out of work: without a job
+316. in the meantime: in the time between two things happening
+317. In that case: if that is the situation
+318. from time to time: once in a while
+319. out of order: not working correctly or broken
+320. to pass something on: give something to somebody
+321. to take over: get control of something
+322. to end up: find yourself in a place you did not expect
+323. to go over: check or review something carefully
+324. to keep on doing something: continue doing something
+325. to come up with something: to think of an idea or a plan
+326. concept n: an idea or belief
+327. origin n: the point from which something starts
+328. group n: a number of people or things together in one place
+329. equipment n: things you need for a certain use, such as sports
+330. performance n: a piece of work done in front of an audience
+331. emphasis n: special importance or attention given to something
+332. address v: deal with a problem
+333. concentrate v: give all your attention or effort to something
+334. influence v: have an effect on or power over someone
+335. analyze v: look at different parts of something in order to understand it
+336. ignore v: pay no attention
+337. employ v: give someone a job
+338. medicine n: the science of preventing and treating illness
+339. concentration n: your ability to give all your attention or effort to something
+340. inquiry n: a question
+341. policy n: plan of action chosen by government, company, etc.
+342. location n: a place
+343. law n: an official rule of a country
+344. claim v: say something is true without having proof
+345. obtain v: Get
+346. function v: work correctly; be in action
+347. justify v: give a good reason for something
+348. enable v: make it possible for someone to do something
+349. made up of: consists of
+350. contrary to: different from
+351. prior to: Before
+352. among other things: one out of a number of things
+353. in agreement: when people have the same opinion
+354. in this respect: about or concerning this
+355. attract v: cause somebody to give attention to something/someone
+356. adjust v: change something a little
+357. paint v: draw or cover with colour
+358. perform v: take part in a play or to sing
+359. respond v: Answer
+360. inquire v: ask for information about something
+361. analysis n: careful examination of the parts of something
+362. failure n: lack of success
+363. level n: line or surface parallel to the ground
+364. cooperation n: when you work together with somebody
+365. majority n: the largest part of a group of people or things
+366. audience n: study of something in order to understand it
+367. brief adj: Short
+368. medical adj: connected with the treatment of illness
+369. entire adj: Whole
+370. obvious adj: easy to see and understand
+371. legal adj: connected to the law
+372. complex adj: difficult to understand
+373. apparently adv: according to how something appears
+374. completely adv: in every way possible
+375. mentally adv: happening in the mind
+376. briefly adv: for a short time
+377. constantly adv: all the time
+378. to put off something: to change something to a later time or date
+379. to set out to do something: to decide to achieve something
+380. to be short of: to not have enough of
+381. to be made up of: to consist of
+382. to set out: to leave on a journey
+383. to bear in mind: to remember something you might need in the future
+384. to achieve: complete something by hard work
+385. to combine: to join or mix things together
+386. to locate: to find
+387. to indicate: to show that something is probably true
+388. to gain: to obtain or win something
+389. to allow: to let someone do something
+390. to illustrate: to add pictures, diagrams tec. To book or magazine
+391. to attempt: to try to do something
+392. to emphasize: to say or express in a strong way
+393. to obtain: to get
+394. to act: to show
+395. acceptable: good enough
+396. Positive: certain; sure
+397. Mental: connected with the mind
+398. characteristic: typical or special
+399. Original: different from others of its type
+400. personal: your own or not belonging to anyone else
+401. increasingly: more and more
+402. Originally: in the beginning
+403. Entirely: Completely
+404. Largely: Mostly
+405. Obviously: in a way that is easy to see and understand
+406. Properly: Correctly
+407. Including: having as a part
+408. in view of: because of
+409. by far: by a large amount
+410. now and then: once in a while
+411. for some time: for a period of time
+412. at first sight: when you see something for the first time
+413. to cooperate: to work together with a person or a group
+414. to approach: to come near or nearer to somebody
+415. to observe: to watch
+416. to adjust: to change something slightly, especially if not in right position
+417. to concentrate: to give all your attention or effort to something
+418. to affect: to make something or someone change
+419. community n: all the people who live in a particular place
+420. feature n: a special part of something
+421. factory n: building or group of buildings where large quantities of good are made by machine
+422. concern n: a feeling of worry about something or someone
+423. manager n: a man or woman who controls an organization or part of one.
+424. findings n: information that has been discovered
+425. constant adj: happening or existing all the time
+426. major adj: very important
+427. average adj: found by calculating the average
+428. accurate adj: exact and correct
+429. financial adj: connected to money
+430. global adj: affecting the whole world
+431. carefully adv: by thinking about what you are doing to not make mistakes
+432. properly adv: correctly
+433. fully adv: completely
+434. greatly adv: mainly or mostly
+435. originally adv: before any changes or developments
+436. highly adv: to a great degree
+437. in light of: because of
+438. at the expense of: harming or damaging something
+439. in favour of: in agreement with
+440. in contrast: different
