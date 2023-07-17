@@ -104,6 +104,25 @@ async def coinFlip(ctx):
   await ctx.send(random.choice(sides))
 
 
+import json
+
+
+@client.command()
+async def trans(ctx, text = None, lang = None):
+  if text == None:
+    await ctx.send("send me the god damn text you asshole")
+    return
+  
+  with open("/workspaces/Python-Stuff/discord/leng/lengs.txt") as f:
+    langs = f.read()
+
+  langs = json.loads(langs)
+
+
+  if lang == None:
+    await ctx.send("you peace of shit enter a language")
+
+
 
 @client.event
 async def on_message(msg):
