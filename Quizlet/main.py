@@ -13,8 +13,6 @@ while still:
         correct = str(correct[0])
 
         
-
-        
         first = random.choice(read)
         first = first.split(":")
         first = first[0]
@@ -52,7 +50,3 @@ while still:
 
     print("well done!")
     print("-----------------------------")
-
-
-
-

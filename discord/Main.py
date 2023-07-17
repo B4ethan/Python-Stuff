@@ -30,9 +30,9 @@ async def say(ctx, *, text =None):
     text = "you peace of shit write someting, done leave it empty"
 
   speech = gTTS(text = text, lang = "en")
-  speech.save("sayCommand/result.mp3")
+  speech.save("/workspaces/Python-Stuff/discord/sayCommand/result.mp3")
 
-  await ctx.send(file = discord.File("sayCommand/result.mp3"))
+  await ctx.send(file = discord.File("/workspaces/Python-Stuff/discord/sayCommand/result.mp3"))
 
 
 def searchGif(keyWord):
@@ -96,7 +96,15 @@ async def gay(ctx, user: discord.Member = None):
   result.save('gayPfp/result.png')
 
   await ctx.send(file=discord.File("gayPfp/result.png"))
-  
+
+@client.command()
+async def coinFlip(ctx):
+  sides = ["Heads", "Tails"]
+
+  await ctx.send(random.choice(sides))
+
+
+
 @client.event
 async def on_message(msg):
   await client.process_commands(msg)
