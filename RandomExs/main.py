@@ -1,3 +1,5 @@
+#this project contains random exercises from this website: https://www.w3resource.com/python-exercises/puzzles/index.php
+
 #Ex1
 def puzzle1(array):
     #write a python program to find a list of integers with exactly two occurrences of 19 and at least three occurrences of five
@@ -25,4 +27,9 @@ def puzzle2(array):
 #Ex3
 
 
+def main():
+    print("hello world!")
 
+
+if __name__ == "__main__":
+    main()
