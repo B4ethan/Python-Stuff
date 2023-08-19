@@ -16,10 +16,19 @@ while True:
     geusse = input("Enter your word: ")
 
     if geusse == word:
-        print("You won!")
         break
 
-    
+    index = 0
+
     for letter in geusse:
         if letter not in word:
-            print(simple_colors.red(letter) + " ")
+            print(simple_colors.red(letter), end= " ")
+        elif letter in word and letter == word[index]:
+            print(simple_colors.green(letter), end= " ")
+        else:
+            print(letter, end= " ")
+        index = index + 1
+
+    print()
+
+print("Yay! you geussed the word! it was: " + word)
