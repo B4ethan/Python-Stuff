@@ -1,13 +1,11 @@
 import numpy as np
+import random
 
 class MagicSquare:
     def __init__(self, size):
         self.size = size
-        self.magicSquare = np.zeros( (self.size, self.size), int )
-
-    def createMagicSquare(self):
-        return
-
+        self.magicSquare = random.sample(range(1, self.size**2+1), self.size**2)
+        self.magicSquare = np.reshape(self.magicSquare, (self.size, self.size))
 
     def sumOfDiagonals(self):
         #if the sum of the diagonals is euqals- return the sum, if not- return -1
@@ -34,11 +32,12 @@ class MagicSquare:
             return arrayOfSum[0]
         else:
             return -1
+   
 
     def checkMagicSquare(self):
         #if the square is magic- return true, else return false
 
-        if(len(np.unique(self.magicSquare)) != len(self.magicSquare)): #if there is at least one duplicate in the array
+        if len(np.unique(self.magicSquare)) != len(self.magicSquare): #if there is at least one duplicate in the array
             return False
         
         arraySums = np.array([self.sumOfDiagonals(), self.sumOfRows(), self.sumOfColumns()])
@@ -55,3 +54,7 @@ class MagicSquare:
 #square = MagicSquare(3)
 #print(square.magicSquare)
        
+
+ms = MagicSquare(3)
+print(ms.magicSquare)
+print(ms.checkMagicSquare())
