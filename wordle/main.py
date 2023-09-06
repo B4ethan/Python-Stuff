@@ -12,7 +12,7 @@ for letter in word:
 
 geusse = ""
 
-while not geusse == word :
+while geusse != word :
     geusse = input("Enter your word: ")
 
     index = 0
