@@ -12,7 +12,7 @@ class MagicSquare:
         for number in range(1, self.size**2+1):
             self.combinations.append(number)
 
-        self.combinations = int(np.array(list(permutations(self.combinations))))
+        self.combinations = list(permutations(self.combinations))
 
 
     def addAllMagicToDict(self):
@@ -21,7 +21,7 @@ class MagicSquare:
         valid = 0
 
         for option in self.combinations:
-            square = Square(option)
+            square = Square(list(option))
 
             if square.checkMagicSquare(): #if found magic square
                 self.MagicDict[valid] = np.arr_str(square.magicSquare)
@@ -30,5 +30,3 @@ class MagicSquare:
 
 s = MagicSquare(3)
 s.addAllMagicToDict()
-
-print(s.MagicDict)

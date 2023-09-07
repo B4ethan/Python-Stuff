@@ -4,7 +4,7 @@ import math
 
 class Square:
     def __init__(self, digits):
-        self.digits = digits
+        self.digits = int(np.array(digits))
         self.magicSquare = np.reshape(self.digits, (math.sqrt(len(self.digits)), math.sqrt(len(self.digits))))
 
 
