@@ -23,10 +23,16 @@ class MagicSquare:
         for option in self.combinations:
             square = Square(list(option))
 
+            print(square.magicSquare)
+            print()
+
             if square.checkMagicSquare(): #if found magic square
-                self.MagicDict[valid] = np.arr_str(square.magicSquare)
+                self.MagicDict[valid] = f"{square.magicSquare} + \n"
                 valid = valid + 1
 
 
 s = MagicSquare(3)
 s.addAllMagicToDict()
+print("------------------")
+print("The 3X3 magic squares: ")
+[print(key,':',value) for key, value in s.MagicDict.items()]
