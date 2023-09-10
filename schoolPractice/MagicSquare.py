@@ -1,6 +1,7 @@
 import numpy as np
 from itertools import permutations
 from Square import Square
+import json
 
 class MagicSquare:
     def __init__(self, size):
@@ -18,7 +19,7 @@ class MagicSquare:
     def addAllMagicToDict(self):
         #checking all the array if they are magic square, if so, adding it to array
 
-        valid = 0
+        valid = 1
 
         for option in self.combinations:
             square = Square(list(option))
@@ -27,12 +28,21 @@ class MagicSquare:
             print()
 
             if square.checkMagicSquare(): #if found magic square
-                self.MagicDict[valid] = f"{square.magicSquare} + \n"
+                self.MagicDict[valid] = f"{square.magicSquare}  \n"
                 valid = valid + 1
 
 
-s = MagicSquare(3)
-s.addAllMagicToDict()
-print("------------------")
-print("The 3X3 magic squares: ")
-[print(key,':',value) for key, value in s.MagicDict.items()]
+def writeToJson(newData):
+    #converting data to json file
+
+    with open ("/workspaces/Python-Stuff/schoolPractice/magicSquare.json", "w") as data:
+        json.dump(newData, data)
+
+
+def main():
+    s = MagicSquare(3)
+    s.addAllMagicToDict()
+    writeToJson(s.MagicDict)
+
+if __name__ == "__main__":
+    main()
