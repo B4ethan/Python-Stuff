@@ -28,6 +28,7 @@ class ShowMagicCube(Layout):
         self.myButton = Button()
         self.myButton.x = 100
         self.myButton.y = 450
+        self.myButton.background_color(186, 228, 229)
         self.myButton.text = "press to show the next maigc square"
         self.myButton.bind(on_press= self.react)
         self.add_widget(self.myButton)
@@ -44,7 +45,6 @@ class ShowMagicCube(Layout):
         current_square = list(self.data.keys())[self.squareKey] #create the new square 
 
         self.show(current_square) #show it on the window
-
 
     def loadJson(self):
         with open("schoolPractice\\magicSquare.json") as json_file:
@@ -69,8 +69,6 @@ class ShowMagicCube(Layout):
             self.labels.append(self.line)
             
         
-
-
 class MyApp(App):
     def build(self):
         return (ShowMagicCube())
