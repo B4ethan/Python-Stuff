@@ -1,7 +1,5 @@
 #in this file, the json will be presented with kivy graphics
-
 import json
-
 import numpy as np
 from kivy.app import App
 from kivy.uix.layout import Layout
@@ -21,19 +19,25 @@ class ShowMagicCube(Layout):
         self.myGrid.size = (500, 500)
         self.add_widget(self.myGrid)
 
-        self.squareKey = 0
+        self.squareKey = 0 #the index of the magic sqaure
+
+        #loading texts font
+        LabelBase.register("numbersFonts", fn_regular="schoolPractice\\font\\Cweamy-Regular.otf")
+        LabelBase.register("buttonFonts", fn_regular="schoolPractice\\font\\buttonFont.ttf")
 
         self.show(list(self.data.keys())[self.squareKey])
 
+        #designing the button
         self.myButton = Button()
-        self.myButton.x = 100
-        self.myButton.y = 450
-        self.myButton.background_color(186, 228, 229)
+        self.myButton.x = 250
+        self.myButton.y = 470
+        self.myButton.width= 400
+        self.myButton.background_color = (186/255, 228/255, 229/255, 1)
         self.myButton.text = "press to show the next maigc square"
+        self.myButton.font_name = "buttonFonts"
+        self.myButton.font_size = 40
         self.myButton.bind(on_press= self.react)
         self.add_widget(self.myButton)
-
-        LabelBase.register("numbersFonts", fn_regular="schoolPractice\\font\\cweamy\\Cweamy-Regular.otf")
 
     def react(self, t):
         self.squareKey += 1
@@ -61,14 +65,13 @@ class ShowMagicCube(Layout):
                 label.text = magic_square[place]
                 place += 1
 
-                label.font_name = "numbersFonts"  # Replace with your custom font name
-                label.font_size = 20  # Adjust font size as needed
+                label.font_name = "numbersFonts"  
+                label.font_size = 20   
 
                 self.line.append(label)
                 self.myGrid.add_widget(label)
-            self.labels.append(self.line)
-            
-        
+            self.labels.append(self.line)            
+
 class MyApp(App):
     def build(self):
         return (ShowMagicCube())
