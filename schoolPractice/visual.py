@@ -33,7 +33,7 @@ class ShowMagicCube(Layout):
         self.myButton.y = 470
         self.myButton.width= 400
         self.myButton.background_color = (186/255, 228/255, 229/255, 1)
-        self.myButton.text = "press to show the next maigc square"
+        self.myButton.text = "press to show the next magic square"
         self.myButton.font_name = "buttonFonts"
         self.myButton.font_size = 40
         self.myButton.bind(on_press= self.react)
