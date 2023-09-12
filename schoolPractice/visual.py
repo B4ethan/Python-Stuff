@@ -8,6 +8,7 @@ from kivy.uix.layout import Layout
 from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.button import Button
+from kivy.core.text import LabelBase
 
 class ShowMagicCube(Layout):
 
@@ -22,7 +23,7 @@ class ShowMagicCube(Layout):
 
         self.squareKey = 0
 
-        self.show()
+        self.show(list(self.data.keys())[self.squareKey])
 
         self.myButton = Button()
         self.myButton.x = 100
@@ -31,16 +32,18 @@ class ShowMagicCube(Layout):
         self.myButton.bind(on_press= self.react)
         self.add_widget(self.myButton)
 
-       
+        LabelBase.register("numbersFonts", fn_regular="schoolPractice\\font\\cweamy\\Cweamy-Regular.otf")
 
+    def react(self, t):
+        self.squareKey += 1
+        if self.squareKey == 8:
+            self.squareKey = 0  
 
-    def react(self,t):
-        if self.squareKey == 7:
-            self.squareKey = 0
-        else:
-            self.squareKey += 1
+        self.myGrid.clear_widgets() #remove the current grid
 
-        self.show()
+        current_square = list(self.data.keys())[self.squareKey] #create the new square 
+
+        self.show(current_square) #show it on the window
 
 
     def loadJson(self):
@@ -48,21 +51,24 @@ class ShowMagicCube(Layout):
             self.data = json.load(json_file)
             print (self.data)
 
-    def show(self):
+    def show(self, magic_square):
         self.labels = []
-        firstSolution =list( self.data.keys())[self.squareKey]
-        place =0
+        place = 0
         for i in range(self.n):
-            line = []
+            self.line = []
             for j in range(self.n):
-
                 label = Label()
-                label.text = firstSolution[place]
-                place +=1
-                line.append(label)
-                self.myGrid.add_widget(label)
-            self.labels.append(line)
+                label.text = magic_square[place]
+                place += 1
 
+                label.font_name = "numbersFonts"  # Replace with your custom font name
+                label.font_size = 20  # Adjust font size as needed
+
+                self.line.append(label)
+                self.myGrid.add_widget(label)
+            self.labels.append(self.line)
+            
+        
 
 
 class MyApp(App):
