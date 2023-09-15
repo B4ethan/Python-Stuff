@@ -22,8 +22,8 @@ class ShowMagicCube(Layout):
         self.squareKey = 0 #the index of the magic sqaure
 
         #loading texts font
-        LabelBase.register("numbersFonts", fn_regular="schoolPractice\\font\\Cweamy-Regular.otf")
-        LabelBase.register("buttonFonts", fn_regular="schoolPractice\\font\\buttonFont.ttf")
+        LabelBase.register("numbersFonts", fn_regular="schoolPractice\\magicSquare\\font\\Cweamy-Regular.otf")
+        LabelBase.register("buttonFonts", fn_regular="schoolPractice\\magicSquare\\font\\buttonFont.ttf")
 
         self.show(list(self.data.keys())[self.squareKey])
 
@@ -51,7 +51,7 @@ class ShowMagicCube(Layout):
         self.show(current_square) #show it on the window
 
     def loadJson(self):
-        with open("schoolPractice\\magicSquare.json") as json_file:
+        with open("schoolPractice\\magicSquare\\magicSquare.json") as json_file:
             self.data = json.load(json_file)
             print (self.data)
 
