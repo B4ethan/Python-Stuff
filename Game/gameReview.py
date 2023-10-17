@@ -106,35 +106,52 @@ class game_tictactoe:
 
     
     def playGame(self):
-        self.printBoard()
-        print()
+        #self.printBoard()
+        #print()
 
         while True:
             self.agentTurn()
-            self.printBoard()
-            print()
+            #self.printBoard()
+            #print()
 
             if self.isWin() == 1:
-                print("agent won!")
-                break
+                print("agent won!\n")
+                return 1
+                
             if self.tie():
-                print("tie!")
-                break
+                print("tie!\n")
+                return 0
 
             self.oppTurn()
-            self.printBoard()
-            print()
+            #self.printBoard()
+            #print()
             
             if self.isWin() == 2:
-                print("opp won!")
-                break
+                print("opp won!\n")
+                return 2
 
 class games:
     def __init__(self):
-        self.agentWins = None
-        self.oppWins = None
-        self.gamesPlayed = 1_000_000
+        self.agentWins = 0
+        self.oppWins = 0
+        self.gamesPlayed = 10
+
+    def play(self):
+        
+        for i in range (self.gamesPlayed):
+            print(f'game {i+1}')
+            result = game_tictactoe().playGame()
+
+            if result == 1:
+                self.agentWins += 1
+            elif result == 2:
+                self.oppWins += 1
+        print("done!\n")
 
 
-game = game_tictactoe()
-game.playGame()
+
+tenGames = games()
+tenGames.play()
+
+print(f"result: \n agent num of wins: {tenGames.agentWins} \n opponent num of wins: {tenGames.oppWins}")
+            
