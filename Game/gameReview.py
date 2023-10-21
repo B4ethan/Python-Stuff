@@ -1,6 +1,9 @@
 import numpy as np
 import random
 
+#if the agent cant win in the next move, he should first check if the opp can win, and block him.
+
+
 class game_tictactoe:
     #we will play as (2), opponnent will be (1)
     def __init__(self):
@@ -9,6 +12,16 @@ class game_tictactoe:
                   [0, 0, 0]])
         self.won = None
 
+        #the higher the point the better the result
+        self.winPoints = 1 
+        self.tiePoints = .5
+        self.lostPoints = 0
+        self.block = .95
+
+        self.boards = []
+        self.gama = .9
+
+        self.boardsWpoint = [] #a list of every board and its points
     #return a list of the leagal places (tupples)
     def allValidPlace(self):
         valid = [] #array with all the valid places
@@ -130,17 +143,24 @@ class game_tictactoe:
                 print("opp won!\n")
                 return 2
 
+    def givePoint(self):
+        pass
+
 class games:
     def __init__(self):
         self.agentWins = 0
         self.oppWins = 0
         self.gamesPlayed = 10
 
+        self.allBoards = {}
     def play(self):
         
         for i in range (self.gamesPlayed):
             print(f'game {i+1}')
-            result = game_tictactoe().playGame()
+            gameBoard = game_tictactoe()
+            gameBoard.boardsWpoint
+
+            result = gameBoard.playGame()
 
             if result == 1:
                 self.agentWins += 1
@@ -148,10 +168,11 @@ class games:
                 self.oppWins += 1
         print("done!\n")
 
+    def saveToJson(self):
+        pass
 
 
 tenGames = games()
 tenGames.play()
 
 print(f"result: \n agent num of wins: {tenGames.agentWins} \n opponent num of wins: {tenGames.oppWins}")
-            
