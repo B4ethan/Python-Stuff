@@ -121,6 +121,7 @@ class game_tictactoe:
     def playGame(self):
         #self.printBoard()
         #print()
+        finish = 0
 
         while True:
             self.agentTurn()
@@ -129,11 +130,13 @@ class game_tictactoe:
 
             if self.isWin() == 1:
                 print("agent won!\n")
-                return 1
+                finish = 1
+                break
                 
             if self.tie():
                 print("tie!\n")
-                return 0
+                finish = 0
+                break
 
             self.oppTurn()
             #self.printBoard()
@@ -141,11 +144,12 @@ class game_tictactoe:
             
             if self.isWin() == 2:
                 print("opp won!\n")
-                return 2
+                finish =  2
+                break
 
-    def givePoint(self):
-        pass
+        return finish
 
+    
 class games:
     def __init__(self):
         self.agentWins = 0
