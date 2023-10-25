@@ -1,5 +1,6 @@
 import numpy as np
 import random
+import json
 
 #if the agent cant win in the next move, he should first check if the opp can win, and block him.
 
@@ -189,18 +190,19 @@ class games:
             gameBoard.givePoints()
 
             for boardPoints in gameBoard.boardsWpoint:
+
                 if boardPoints[0] in self.allBoards:
                     self.allBoards[boardPoints[0]][1] += 1
                     self.allBoards[boardPoints[0]][0] += boardPoints[1]
                 
                 else:
-                    self.allBoards.update({boardPoints[0] : (boardPoints[1], 1))
-
+                    self.allBoards.update({boardPoints[0] : (boardPoints[1], 1)})
 
         print("done!\n")
 
-    def saveToJson(self):
-        pass
+    def saveToJso(self):
+        with open ('Game\\boards.json', 'w') as data:
+            json.dump(self.allBoards, data)
 
 
 #tenGames = games()
