@@ -22,6 +22,7 @@ class game_tictactoe:
         self.gama = .9
 
         self.boardsWpoint = [] #a list of every board and its points
+        
     #return a list of the leagal places (tupples)
     def allValidPlace(self):
         valid = [] #array with all the valid places
@@ -121,48 +122,70 @@ class game_tictactoe:
     def playGame(self):
         #self.printBoard()
         #print()
-        finish = 0
+
 
         while True:
             self.agentTurn()
             #self.printBoard()
             #print()
+            self.boards.append(np.array2string(self.board))
 
             if self.isWin() == 1:
                 print("agent won!\n")
-                finish = 1
-                break
+                return 1
+                
                 
             if self.tie():
                 print("tie!\n")
-                finish = 0
-                break
+                return 0
+                
 
             self.oppTurn()
             #self.printBoard()
             #print()
+            self.boards.append(np.array2string(self.board))
             
             if self.isWin() == 2:
                 print("opp won!\n")
-                finish =  2
-                break
+                return 2
 
-        return finish
+    def givePoints(self):
+        result = self.playGame()      
 
+        self.boards = self.boards[::-1]
+
+        if result == 1:
+            self.boardsWpoint.append((self.boards[0], self.winPoints))
+            
+            for i in range(1, len(self.boards) - 1):
+                self.boardsWpoint.append((self.boards[i], self.winPoints * (self.gama ** i)))
+        
+        elif result == 0:
+            self.boardsWpoint.append((self.boards[0], self.tiePoints))
+
+            for i in range (1, len(self.boards) - 1):
+                self.boardsWpoint.append((self.boards[i], self.tiePoints * (self.gama ** i)))
+        
+        else:
+            for i in range(len(self.boards)):
+                self.boardsWpoint.append((self.boards[i], 0))
+
+        self.boards = []
     
 class games:
     def __init__(self):
         self.agentWins = 0
         self.oppWins = 0
-        self.gamesPlayed = 10
+        self.gamesPlayed = 1_000_000
 
         self.allBoards = {}
+        
     def play(self):
         
         for i in range (self.gamesPlayed):
             print(f'game {i+1}')
             gameBoard = game_tictactoe()
-            gameBoard.boardsWpoint
+            #gameBoard.boardsWpoint
 
             result = gameBoard.playGame()
 
@@ -176,7 +199,11 @@ class games:
         pass
 
 
-tenGames = games()
-tenGames.play()
+#tenGames = games()
+#tenGames.play()
 
-print(f"result: \n agent num of wins: {tenGames.agentWins} \n opponent num of wins: {tenGames.oppWins}")
+#print(f"result: \n agent num of wins: {tenGames.agentWins} \n opponent num of wins: {tenGames.oppWins}")
+
+check = game_tictactoe()
+check.givePoints()
+print(check.boardsWpoint)
