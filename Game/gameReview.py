@@ -128,7 +128,7 @@ class game_tictactoe:
             self.agentTurn()
             #self.printBoard()
             #print()
-            self.boards.append(np.array2string(self.board))
+            self.boards.append(str(self.board.flatten()))
 
             if self.isWin() == 1:
                 print("agent won!\n")
@@ -143,7 +143,7 @@ class game_tictactoe:
             self.oppTurn()
             #self.printBoard()
             #print()
-            self.boards.append(np.array2string(self.board))
+            self.boards.append(str(self.board.flatten()))
             
             if self.isWin() == 2:
                 print("opp won!\n")
@@ -179,20 +179,24 @@ class games:
         self.gamesPlayed = 1_000_000
 
         self.allBoards = {}
-        
+
     def play(self):
         
         for i in range (self.gamesPlayed):
-            print(f'game {i+1}')
+            #print(f'game {i+1}')
             gameBoard = game_tictactoe()
-            #gameBoard.boardsWpoint
+            
+            gameBoard.givePoints()
 
-            result = gameBoard.playGame()
+            for boardPoints in gameBoard.boardsWpoint:
+                if boardPoints[0] in self.allBoards:
+                    self.allBoards[boardPoints[0]][1] += 1
+                    self.allBoards[boardPoints[0]][0] += boardPoints[1]
+                
+                else:
+                    self.allBoards.update({boardPoints[0] : (boardPoints[1], 1))
 
-            if result == 1:
-                self.agentWins += 1
-            elif result == 2:
-                self.oppWins += 1
+
         print("done!\n")
 
     def saveToJson(self):
