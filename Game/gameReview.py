@@ -252,6 +252,6 @@ class games:
 
 oneGame = game_tictactoe()
 
-oneGame.playGame()
-print(oneGame.boards)
-print(oneGame.blockBoards)
+oneGame.givePoints()
+print(oneGame.boardsWpoint)
+
