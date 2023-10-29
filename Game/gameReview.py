@@ -4,7 +4,6 @@ import json
 
 #if the agent cant win in the next move, he should first check if the opp can win, and block him.
 
-
 class game_tictactoe:
     #we will play as (2), opponnent will be (1)
     def __init__(self):
@@ -22,6 +21,7 @@ class game_tictactoe:
         self.boards = []
         self.gama = .9
 
+        self.blockBoards = [] #a list with all the boards where the agent needs to block the oppenent
         self.boardsWpoint = [] #a list of every board and its points
         
     #return a list of the leagal places (tupples)
@@ -33,7 +33,6 @@ class game_tictactoe:
                 if self.board[i][j] == 0: #if found a valid place
                     valid.append((i, j)) #add the place to the array
         return valid
-
 
     #returns 0 if there is no win, 1 if opponnent won, 2 if we won
     def isWinRow(self): #checking for win in the rows
@@ -119,35 +118,42 @@ class game_tictactoe:
     def printBoard(self):
         print(self.board)
 
-    
     def playGame(self):
         #self.printBoard()
         #print()
 
 
         while True:
+
+            for place in self.allValidPlace():
+                self.board[place] = 2
+
+                if self.isWin() == 2:
+                    self.blockBoards.append(self.board)
+                    self.board[place] = 0
+
             self.agentTurn()
             #self.printBoard()
             #print()
-            self.boards.append(str(self.board.flatten()))
+            self.boards.append(' , '.join(self.board.flatten().astype(str)))
 
             if self.isWin() == 1:
-                print("agent won!\n")
+                #print("agent won!\n")
                 return 1
                 
                 
             if self.tie():
-                print("tie!\n")
+                #print("tie!\n")
                 return 0
                 
 
             self.oppTurn()
             #self.printBoard()
             #print()
-            self.boards.append(str(self.board.flatten()))
+            self.boards.append(''.join(self.board.flatten().astype(str)))
             
             if self.isWin() == 2:
-                print("opp won!\n")
+                #print("opp won!\n")
                 return 2
 
     def givePoints(self):
@@ -156,20 +162,20 @@ class game_tictactoe:
         self.boards = self.boards[::-1]
 
         if result == 1:
-            self.boardsWpoint.append((self.boards[0], self.winPoints))
+            self.boardsWpoint.append([self.boards[0], self.winPoints])
             
             for i in range(1, len(self.boards) - 1):
-                self.boardsWpoint.append((self.boards[i], self.winPoints * (self.gama ** i)))
+                self.boardsWpoint.append([self.boards[i], self.winPoints * (self.gama ** i)])
         
         elif result == 0:
-            self.boardsWpoint.append((self.boards[0], self.tiePoints))
+            self.boardsWpoint.append([self.boards[0], self.tiePoints])
 
             for i in range (1, len(self.boards) - 1):
-                self.boardsWpoint.append((self.boards[i], self.tiePoints * (self.gama ** i)))
+                self.boardsWpoint.append([self.boards[i], self.tiePoints * (self.gama ** i)])
         
         else:
             for i in range(len(self.boards)):
-                self.boardsWpoint.append((self.boards[i], 0))
+                self.boardsWpoint.append([self.boards[i], 0])
 
         self.boards = []
     
@@ -179,8 +185,15 @@ class games:
         self.oppWins = 0
         self.gamesPlayed = 1_000_000
 
-        self.allBoards = {}
-
+        self.allBoards = {}  
+    try:
+        with open('Game\\boards.json', 'r') as data:
+            loaded_data = json.load(data)
+            if loaded_data:  # Check if the loaded data is not empty
+                self.allBoards = loaded_data
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass  
+        
     def play(self):
         
         for i in range (self.gamesPlayed):
@@ -192,17 +205,18 @@ class games:
             for boardPoints in gameBoard.boardsWpoint:
 
                 if boardPoints[0] in self.allBoards:
-                    self.allBoards[boardPoints[0]][1] += 1
-                    self.allBoards[boardPoints[0]][0] += boardPoints[1]
-                
+                    self.allBoards[boardPoints[0]][1] += 1 
+                    self.allBoards[boardPoints[0]][0] = ((self.allBoards[boardPoints[0]][1] -1) * self.allBoards[boardPoints[0]][0] + boardPoints[1]) / self.allBoards[boardPoints[0]][1]
+
+                                    
                 else:
-                    self.allBoards.update({boardPoints[0] : (boardPoints[1], 1)})
+                    self.allBoards.update({boardPoints[0] : (boardPoints[1], 1))
+
 
         print("done!\n")
 
-    def saveToJso(self):
-        with open ('Game\\boards.json', 'w') as data:
-            json.dump(self.allBoards, data)
+    def saveToJson(self):
+        pass
 
 
 #tenGames = games()
@@ -210,6 +224,6 @@ class games:
 
 #print(f"result: \n agent num of wins: {tenGames.agentWins} \n opponent num of wins: {tenGames.oppWins}")
 
-check = game_tictactoe()
-check.givePoints()
-print(check.boardsWpoint)
+Mgames = games()
+Mgames.play()
+Mgames.saveToJson()
