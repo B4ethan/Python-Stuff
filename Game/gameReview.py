@@ -16,12 +16,13 @@ class game_tictactoe:
         self.winPoints = 1 
         self.tiePoints = .5
         self.lostPoints = 0
-        self.block = .95
+        self.gama = .9
+        self.blockPoints = (self.winPoints + self.gama)/2
 
         self.boards = []
-        self.gama = .9
 
         self.blockBoards = [] #a list with all the boards where the agent needs to block the oppenent
+        self.blockBoardsWpoint = [] #a list with all the boards where the agent needs to block the oppenent and its points
         self.boardsWpoint = [] #a list of every board and its points
         
     #return a list of the leagal places (tupples)
@@ -124,18 +125,18 @@ class game_tictactoe:
 
 
         while True:
-
             for place in self.allValidPlace():
                 self.board[place] = 2
 
                 if self.isWin() == 2:
-                    self.blockBoards.append(self.board)
                     self.board[place] = 0
+                    self.blockBoards.append(','.join(self.board.flatten().astype(str)))
+
 
             self.agentTurn()
             #self.printBoard()
             #print()
-            self.boards.append(' , '.join(self.board.flatten().astype(str)))
+            self.boards.append(','.join(self.board.flatten().astype(str)))
 
             if self.isWin() == 1:
                 #print("agent won!\n")
@@ -150,7 +151,7 @@ class game_tictactoe:
             self.oppTurn()
             #self.printBoard()
             #print()
-            self.boards.append(''.join(self.board.flatten().astype(str)))
+            self.boards.append(','.join(self.board.flatten().astype(str)))
             
             if self.isWin() == 2:
                 #print("opp won!\n")
@@ -175,9 +176,14 @@ class game_tictactoe:
         
         else:
             for i in range(len(self.boards)):
-                self.boardsWpoint.append([self.boards[i], 0])
+                self.boardsWpoint.append([self.boards[i], self.lostPoints])
+
+        #adding the block boards to a different array
+        for board in self.blockBoards:
+           self.blockBoardsWpoint.append([board, self.blockPoints])
 
         self.boards = []
+        self.blockBoards = []
     
 class games:
     def __init__(self):
@@ -186,13 +192,14 @@ class games:
         self.gamesPlayed = 1_000_000
 
         self.allBoards = {}  
-    try:
-        with open('Game\\boards.json', 'r') as data:
-            loaded_data = json.load(data)
-            if loaded_data:  # Check if the loaded data is not empty
-                self.allBoards = loaded_data
-    except (FileNotFoundError, json.JSONDecodeError):
-        pass  
+        
+        try:
+            with open('Game\\boards.json', 'r') as data:
+                loaded_data = json.load(data)
+                if loaded_data:  # Check if the loaded data is not empty
+                    self.allBoards = loaded_data
+        except (FileNotFoundError, json.JSONDecodeError):
+            pass  
         
     def play(self):
         
@@ -212,6 +219,8 @@ class games:
                 else:
                     self.allBoards.update({boardPoints[0] : (boardPoints[1], 1))
 
+            if i % 1000 == 0:
+                print(i)
 
         print("done!\n")
 
