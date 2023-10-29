@@ -1,6 +1,7 @@
 import numpy as np
 import random
 import json
+import copy
 
 #if the agent cant win in the next move, he should first check if the opp can win, and block him.
 
@@ -103,6 +104,9 @@ class game_tictactoe:
                 place = (xPlace, yPlace)
 
         self.board[place[0]][place[1]] = 1
+
+    def smartAgent(self):
+        pass
 
     def oppTurn(self, place = None):
         if place == None: #if no place is given
