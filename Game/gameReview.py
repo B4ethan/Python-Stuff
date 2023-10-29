@@ -129,12 +129,12 @@ class game_tictactoe:
 
 
         while True:
-            for place in self.allValidPlace():
+            '''for place in self.allValidPlace():
                 self.board[place] = 2
 
                 if self.isWin() == 2:
                     self.board[place] = 0
-                    self.blockBoards.append(','.join(self.board.flatten().astype(str)))
+                    self.blockBoards.append(','.join(self.board.flatten().astype(str)))'''
 
 
             self.agentTurn()
@@ -143,12 +143,12 @@ class game_tictactoe:
             self.boards.append(','.join(self.board.flatten().astype(str)))
 
             if self.isWin() == 1:
-                #print("agent won!\n")
+                print("agent won!\n")
                 return 1
                 
                 
             if self.tie():
-                #print("tie!\n")
+                print("tie!\n")
                 return 0
                 
 
@@ -158,7 +158,7 @@ class game_tictactoe:
             self.boards.append(','.join(self.board.flatten().astype(str)))
             
             if self.isWin() == 2:
-                #print("opp won!\n")
+                print("opp won!\n")
                 return 2
 
     def givePoints(self):
@@ -239,11 +239,19 @@ class games:
         with open('Game\\boards.json', 'w') as data:
             json.dump(self.allBoards, data)
 
+
+
 #tenGames = games()
 #tenGames.play()
 
 #print(f"result: \n agent num of wins: {tenGames.agentWins} \n opponent num of wins: {tenGames.oppWins}")
 
-Mgames = games()
-Mgames.play()
-Mgames.saveToJson()
+#Mgames = games()
+#Mgames.play()
+#Mgames.saveToJson()
+
+oneGame = game_tictactoe()
+
+oneGame.playGame()
+print(oneGame.boards)
+print(oneGame.blockBoards)
