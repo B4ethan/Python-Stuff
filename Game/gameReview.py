@@ -214,23 +214,30 @@ class games:
             gameBoard.givePoints()
 
             for boardPoints in gameBoard.boardsWpoint:
-
                 if boardPoints[0] in self.allBoards:
                     self.allBoards[boardPoints[0]][1] += 1 
                     self.allBoards[boardPoints[0]][0] = ((self.allBoards[boardPoints[0]][1] -1) * self.allBoards[boardPoints[0]][0] + boardPoints[1]) / self.allBoards[boardPoints[0]][1]
 
                                     
                 else:
-                    self.allBoards.update({boardPoints[0] : (boardPoints[1], 1))
+                    self.allBoards.update({boardPoints[0] : [boardPoints[1], 1]})
 
-            if i % 1000 == 0:
+            for blockBoardPoints in gameBoard.blockBoardsWpoint:
+                if blockBoardPoints[0] in self.allBoards:
+                    self.allBoards[blockBoardPoints[0]][1] += 1 
+                    self.allBoards[blockBoardPoints[0]][0] = ((self.allBoards[blockBoardPoints[0]][1] -1) * self.allBoards[blockBoardPoints[0]][0] + blockBoardPoints[1]) / self.allBoards[blockBoardPoints[0]][1]
+
+                else:
+                    self.allBoards.update({blockBoardPoints[0] : [blockBoardPoints[1], 1]})
+
+            if i % 100_000 == 0:
                 print(i)
 
         print("done!\n")
 
     def saveToJson(self):
-        pass
-
+        with open('Game\\boards.json', 'w') as data:
+            json.dump(self.allBoards, data)
 
 #tenGames = games()
 #tenGames.play()
