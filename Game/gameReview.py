@@ -15,7 +15,7 @@ class game_tictactoe:
 
         #the higher the point the better the result
         self.winPoints = 1 
-        self.tiePoints = .5
+        self.tiePoints = .3
         self.lostPoints = 0
         self.gama = .9
         self.blockPoints = (self.winPoints + self.gama)/2
@@ -130,7 +130,7 @@ class game_tictactoe:
 
         while True:
             '''for place in self.allValidPlace():
-                self.board[place] = 2
+                self.board[place[0]][place[1]] = 2
 
                 if self.isWin() == 2:
                     self.board[place] = 0
@@ -143,12 +143,12 @@ class game_tictactoe:
             self.boards.append(','.join(self.board.flatten().astype(str)))
 
             if self.isWin() == 1:
-                print("agent won!\n")
+                #print("agent won!\n")
                 return 1
                 
                 
             if self.tie():
-                print("tie!\n")
+                #print("tie!\n")
                 return 0
                 
 
@@ -158,24 +158,25 @@ class game_tictactoe:
             self.boards.append(','.join(self.board.flatten().astype(str)))
             
             if self.isWin() == 2:
-                print("opp won!\n")
+                #print("opp won!\n")
                 return 2
 
     def givePoints(self):
         result = self.playGame()      
 
         self.boards = self.boards[::-1]
+        
 
         if result == 1:
             self.boardsWpoint.append([self.boards[0], self.winPoints])
             
-            for i in range(1, len(self.boards) - 1):
+            for i in range(1, len(self.boards)):
                 self.boardsWpoint.append([self.boards[i], self.winPoints * (self.gama ** i)])
         
         elif result == 0:
             self.boardsWpoint.append([self.boards[0], self.tiePoints])
 
-            for i in range (1, len(self.boards) - 1):
+            for i in range (1, len(self.boards)):
                 self.boardsWpoint.append([self.boards[i], self.tiePoints * (self.gama ** i)])
         
         else:
@@ -246,12 +247,14 @@ class games:
 
 #print(f"result: \n agent num of wins: {tenGames.agentWins} \n opponent num of wins: {tenGames.oppWins}")
 
-#Mgames = games()
-#Mgames.play()
-#Mgames.saveToJson()
 
+Mgames = games()
+Mgames.play()
+Mgames.saveToJson()
+
+'''
 oneGame = game_tictactoe()
 
 oneGame.givePoints()
 print(oneGame.boardsWpoint)
-
+'''
