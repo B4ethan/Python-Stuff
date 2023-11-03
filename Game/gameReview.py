@@ -223,13 +223,13 @@ class games:
                 else:
                     self.allBoards.update({boardPoints[0] : [boardPoints[1], 1]})
 
-            for blockBoardPoints in gameBoard.blockBoardsWpoint:
+            '''for blockBoardPoints in gameBoard.blockBoardsWpoint:
                 if blockBoardPoints[0] in self.allBoards:
                     self.allBoards[blockBoardPoints[0]][1] += 1 
                     self.allBoards[blockBoardPoints[0]][0] = ((self.allBoards[blockBoardPoints[0]][1] -1) * self.allBoards[blockBoardPoints[0]][0] + blockBoardPoints[1]) / self.allBoards[blockBoardPoints[0]][1]
 
                 else:
-                    self.allBoards.update({blockBoardPoints[0] : [blockBoardPoints[1], 1]})
+                    self.allBoards.update({blockBoardPoints[0] : [blockBoardPoints[1], 1]})'''
 
             if i % 100_000 == 0:
                 print(i)
