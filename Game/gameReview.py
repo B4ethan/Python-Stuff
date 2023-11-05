@@ -15,12 +15,10 @@ class game_tictactoe:
 
         #the higher the point the better the result
         self.winPoints = 1 
-        self.tiePoints = .3
+        self.tiePoints = .5
         self.lostPoints = 0
         self.gama = .9
         self.blockPoints = (self.winPoints + self.gama)/2
-
-        self.boards = []
 
         self.blockBoards = [] #a list with all the boards where the agent needs to block the oppenent
         self.blockBoardsWpoint = [] #a list with all the boards where the agent needs to block the oppenent and its points
@@ -69,7 +67,7 @@ class game_tictactoe:
             if diag[0] == 2:
                 return 2
             
-        diag = np.diag(np.flip(self.board))
+        diag = np.diag(np.fliplr(self.board))
 
         if np.all(diag == diag[0]): #if all the number in the diagonal is the same (someone win, or no one placed)
             if diag[0] == 1:
@@ -126,6 +124,8 @@ class game_tictactoe:
         #self.printBoard()
         #print()
 
+        self.boards = []
+
         while True:
             '''for place in self.allValidPlace():
                 self.board[place[0]][place[1]] = 2
@@ -134,7 +134,7 @@ class game_tictactoe:
                     self.board[place] = 0
                     self.blockBoards.append(','.join(self.board.flatten().astype(str)))'''
 
-
+            
             self.agentTurn()
             #self.printBoard()
             #print()
@@ -164,7 +164,7 @@ class game_tictactoe:
 
         self.boardsWpoint = {}
         for i, board in enumerate(reversed(self.boards)):
-            self.boardsWpoint[board] = result * self.gama ** i
+            self.boardsWpoint[board] = result * (self.gama ** i)
 
         return self.boardsWpoint   
     
@@ -197,7 +197,7 @@ class games:
                     self.allBoards[board] = (points, 1)
                 else:
                     prev = self.allBoards[board]
-                    self.allBoards[board] = ((prev[0] * prev[1] + points) / (prev[1] + 1), prev[1] + 1)
+                    self.allBoards[board] = (prev[0] + points, prev[1] + 1) #((prev[0] * prev[1] + points) / (prev[1] + 1), prev[1] + 1)
 
             '''for blockBoardPoints in gameBoard.blockBoardsWpoint:
                 if blockBoardPoints[0] in self.allBoards:
@@ -209,6 +209,10 @@ class games:
 
             if i % 100_000 == 0:
                 print(i)
+
+        for board in self.allBoards:
+            tup = self.allBoards[board]
+            self.allBoards[board] = (tup[0]/tup[1], tup[1])
 
         print("done!\n")
 
