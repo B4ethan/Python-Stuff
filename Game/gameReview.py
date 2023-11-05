@@ -24,7 +24,6 @@ class game_tictactoe:
 
         self.blockBoards = [] #a list with all the boards where the agent needs to block the oppenent
         self.blockBoardsWpoint = [] #a list with all the boards where the agent needs to block the oppenent and its points
-        self.boardsWpoint = [] #a list of every board and its points
         
     #return a list of the leagal places (tupples)
     def allValidPlace(self):
@@ -127,7 +126,6 @@ class game_tictactoe:
         #self.printBoard()
         #print()
 
-
         while True:
             '''for place in self.allValidPlace():
                 self.board[place[0]][place[1]] = 2
@@ -144,12 +142,12 @@ class game_tictactoe:
 
             if self.isWin() == 1:
                 #print("agent won!\n")
-                return 1
+                return self.winPoints
                 
                 
             if self.tie():
                 #print("tie!\n")
-                return 0
+                return self.tiePoints
                 
 
             self.oppTurn()
@@ -159,36 +157,16 @@ class game_tictactoe:
             
             if self.isWin() == 2:
                 #print("opp won!\n")
-                return 2
-
-    def givePoints(self):
-        result = self.playGame()      
-
-        self.boards = self.boards[::-1]
-        
-
-        if result == 1:
-            self.boardsWpoint.append([self.boards[0], self.winPoints])
+                return self.lostPoints
             
-            for i in range(1, len(self.boards)):
-                self.boardsWpoint.append([self.boards[i], self.winPoints * (self.gama ** i)])
-        
-        elif result == 0:
-            self.boardsWpoint.append([self.boards[0], self.tiePoints])
+    def givePoints(self):
+        result = self.playGame()
 
-            for i in range (1, len(self.boards)):
-                self.boardsWpoint.append([self.boards[i], self.tiePoints * (self.gama ** i)])
-        
-        else:
-            for i in range(len(self.boards)):
-                self.boardsWpoint.append([self.boards[i], self.lostPoints])
+        self.boardsWpoint = {}
+        for i, board in enumerate(reversed(self.boards)):
+            self.boardsWpoint[board] = result * self.gama ** i
 
-        #adding the block boards to a different array
-        for board in self.blockBoards:
-           self.blockBoardsWpoint.append([board, self.blockPoints])
-
-        self.boards = []
-        self.blockBoards = []
+        return self.boardsWpoint   
     
 class games:
     def __init__(self):
@@ -214,14 +192,12 @@ class games:
             
             gameBoard.givePoints()
 
-            for boardPoints in gameBoard.boardsWpoint:
-                if boardPoints[0] in self.allBoards:
-                    self.allBoards[boardPoints[0]][1] += 1 
-                    self.allBoards[boardPoints[0]][0] = ((self.allBoards[boardPoints[0]][1] -1) * self.allBoards[boardPoints[0]][0] + boardPoints[1]) / self.allBoards[boardPoints[0]][1]
-
-                                    
+            for board, points in gameBoard.boardsWpoint.items():
+                if board not in self.allBoards:
+                    self.allBoards[board] = (points, 1)
                 else:
-                    self.allBoards.update({boardPoints[0] : [boardPoints[1], 1]})
+                    prev = self.allBoards[board]
+                    self.allBoards[board] = ((prev[0] * prev[1] + points) / (prev[1] + 1), prev[1] + 1)
 
             '''for blockBoardPoints in gameBoard.blockBoardsWpoint:
                 if blockBoardPoints[0] in self.allBoards:
@@ -255,6 +231,6 @@ Mgames.saveToJson()
 '''
 oneGame = game_tictactoe()
 
-oneGame.givePoints()
-print(oneGame.boardsWpoint)
+print(oneGame.givePoints())
 '''
+
