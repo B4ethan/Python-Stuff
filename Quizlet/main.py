@@ -2,30 +2,31 @@ import random
 
 still = True
 
+with open('words.txt', encoding='utf-8') as f:
+    read = f.readlines()
+
 while still:
-    with open('words.txt') as f:
-        read = f.readlines()
-        correct = random.choice(read)
-        correct = correct.split(":")
+    correct = random.choice(read)
+    correct = correct.split(":")
 
-        qustion = correct[1]
-        
-        correct = str(correct[0])
+    qustion = correct[1]
+    
+    correct = str(correct[0])
 
-        
-        first = random.choice(read)
-        first = first.split(":")
-        first = first[0]
+    '''
+    first = random.choice(read)
+    first = first.split(":")
+    first = first[0]
 
-        
-        second = random.choice(read)
-        second = second.split(":")
-        second = second[0]
+    
+    second = random.choice(read)
+    second = second.split(":")
+    second = second[0]
 
-        
-        third = random.choice(read)
-        third = third.split(":")
-        third = third[0]
+    
+    third = random.choice(read)
+    third = third.split(":")
+    third = third[0]
 
     choices = [correct, first, second, third]
     random.shuffle(choices)
@@ -33,18 +34,18 @@ while still:
     print(qustion)
     for i in choices:
         print(i)
-
+    '''
+    print(qustion)
     answer = input("type your answer: ")
-
-    if answer == "stop":
-        still = False
-        break
-
-
+    
     while answer not in correct:
         if answer == "stop":
             still = False
             break
+            
+        if answer == "answer" or answer == None:
+            print(correct)
+            
         
         answer = input("try again! ")
 
