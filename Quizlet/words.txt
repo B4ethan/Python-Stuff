@@ -1,77 +1,28 @@
-1. A broked heart : לב שבור
-2. A hanfull of : ...הרבה מ
-3. A Mass of sth : הרבה
-4. A sharp rise : עלייה חדה
-5. increase : עלייה
-6. drop : ירידה, נפילה
-7. abandon : לנטוש
-8. admit : להודות
-9. adviser/advisor : יועץ/יועצת
-10. affair : רומן
-11. admission : הודאה
-12. allow entry : אישור כניסה
-13. Situation : מצב
-14. business : עסק
-15. affection : חיבה
-16. after all : אחרי הכל
-17. against the law : נגד החוק
-18. at your convenience : בזמן שנוח לך
-19. attachment : נספח / קשר
-20. attract/get attention : לקבל תשומת לב
-21. agenda : סדר יום
-22. all in all : בסכך הכל
-23. all over again : לעשות מחדש
-24. go over, review : לחזור
-25. all the way : ללכת על הכל, לתת הכל
-26. amuse : לבדר
-27. amusement : בידור
-28. an awful lot : הרבה (בצורה שלילית)
-29. Ancestor : אב קדום
-30. any day/ minute/ time : בכל זמן, דקה, יום
-31. apeal : לערער
-32. arms : ידיים
-33. armed : חמוש
-34. around/ round the clock : בסביבות השעה
-35. arrow : חץ
-36. archer : קשת (מקצוע)
-37. artificial : מלאכותי
-38. artificial intelligence : בינה מלאכותית
-39. as a result of sth : כתוצאה מ
-40. as a whole : ככלל
-41. as far as know : ככל שידוע לי
-42. as far as sth is concerned : ככל שזה תלוי ב
-43. by far : לגמרי
-44. as follows : בעקבות, כתוצאה מ
-45. as regards sth : בהתייחס ל
-46. as though : כאילו
-47. aside : לצד
-48. assignment : משימה
-49. aside from : חוץ
-50. associate : לקשר
-51. association : קשר
-52. assumption : הנחה
-53. assume : להניח
-54. astonishment : תדהמה
-55. astonish : להדהים
-56. at first sight : ממבט ראשון
-57. at risk : בסיכון
-58. Awkward : מביך
-59. Backup : גיבוי
-60. Balance : איזון
-61. Equality : שוויון
-62. Money : כסף
-63. Ban : איסור, לאסור
-64. bare : חשוף
-65. Basement : מרתף
-66. be no use : לא יעיל
-67. Be on some use : להיות בשימוש
-68. Be a bad good influence : להיות בעל השפעה טובה רעה
-69. Be absorbed in Sth : להיות שקוע במשהו
-70. Be associated with sth : להיות קשור למשהו
-71. Be at on the point of doing sth : להיות בזמן שאתה עסוק
-72. Be based at in : להיות ממוקם ב
-73. Be conscious of : להיות במודעות ל
-74. augmented reality: מציאות מעוותת
-75. authonomy : אוטונומיה
-76. availability : זמינות
-77. avoid doing sth : להימנע מלעשות משהו
+accurate (inaccurate): exact, without mistakes or errors
+accurately (inaccurately): correctly
+accuracy: the fact of being exact or correct
+alleviate: make easier to bear
+alleviation: relief
+assess: decide the value of something
+assessment: the process of testing, and making a judgment about, someone’s knowledge, ability, skills
+assessor: someone whose job is to judge or decide the amount, value, quality, or importance of something
+appreciate: to be thankful for
+appreciation: the act of recognizing or understanding that something is valuable, important, or as described
+context: words that come before and after a certain word or illustrate its meaning
+culture: Beliefs, customs, and traditions of a specific group of people.
+cultural (event): relating to the habits, traditions, and beliefs of a society
+cultured (uncutured) person: A cultured person has had a good education and knows a lot about art, music, literature
+culturally: in a way that relates to the habits, traditions, and beliefs of a society
+drawback: shortcoming, disadvantage
+electronics: the scientific study of electric current and the technology that uses it
+electronic: relating to computers or something that is done by computers
+electronically: using or involving an electronic device
+embarrass: to make (someone) feel confused in front of other people
+embarrassing: making feel ashamed, nervous, or uncomfortable
+embarrassed: feeling ashamed and uncomfortable
+embarrassment: a feeling of shame, or awkwardness
+estimate: to guess or calculate the cost, size, value, etc. of something
+estimated: roughly calculated or approximate
+estimation: a rough calculation of the value, number, quantity, or extent of something.
+equivalent: equal in value or meaning
+equivalence: the fact of having the same value, purpose, job, etc. as something else
