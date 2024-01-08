@@ -1,31 +1,53 @@
 import random
-import simple_colors
 
-word = open("/workspaces/Python-Stuff/wordle/words.txt").readlines()
-word = random.choice(word).lower()
+still = True
 
-wordArr = []
+with open('words.txt', encoding='utf-8') as f:
+    read = f.readlines()
 
-for letter in word:
-    wordArr.append(letter)
+while still:
+    correct = random.choice(read)
+    correct = correct.split(":")
 
+    qustion = correct[1]
+    
+    correct = str(correct[0])
 
-geusse = ""
+    '''
+    first = random.choice(read)
+    first = first.split(":")
+    first = first[0]
 
-while geusse != word :
-    geusse = input("Enter your word: ")
+    
+    second = random.choice(read)
+    second = second.split(":")
+    second = second[0]
 
-    index = 0
+    
+    third = random.choice(read)
+    third = third.split(":")
+    third = third[0]
 
-    for letter in geusse:
-        if letter not in word:
-            print(simple_colors.red(letter), end= " ")
-        elif letter in word and letter == word[index]:
-            print(simple_colors.green(letter), end= " ")
-        else:
-            print(letter, end= " ")
-        index = index + 1
+    choices = [correct, first, second, third]
+    random.shuffle(choices)
 
-    print()
+    print(qustion)
+    for i in choices:
+        print(i)
+    '''
+    print(qustion)
+    answer = input("type your answer: ")
+    
+    while answer not in correct:
+        if answer == "stop":
+            still = False
+            break
+            
+        if answer == "answer" or answer == None:
+            print(correct)
+            
+        
+        answer = input("try again! ")
 
-print("Yay! you geussed the word! it was: " + word)
+    print("well done!")
+    print("-----------------------------")

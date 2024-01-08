@@ -1,183 +1,28 @@
-life
-Alike
-Aloft
-Alone
-Along
-Aloof
-Aloud
-Amiss
-Amply
-Apace
-Apart
-Aptly
-Arear
-Aside
-Askew
-Awful
-Badly
-Bally
-Below
-Canny
-Cheap
-Clean
-Clear
-Coyly
-Daily
-Dimly
-Dirty
-Ditto
-Dryly
-Dully
-Early
-Extra
-False
-Fatly
-Feyly
-First
-Fitly
-Forte
-Forth
-Fresh
-Fully
-Funny
-Gaily
-Gayly
-Godly
-Great
-Haply
-Heavy
-Hella
-Hence
-Hotly
-Icily
-Infra
-Intl.
-Jildi
-Jolly
-Laxly
-Lento
-Light
-Lowly
-Madly
-Maybe
-Never
-Newly
-Nobly
-Oddly
-Often
-Other
-Ought
-Party
-Piano
-Plain
-Plonk
-Plumb
-Prior
-Queer
-Quick
-Quite
-Ramen
-Rapid
-Redly
-Right
-Rough
-Round
-Sadly
-Secus
-Selly
-Sharp
-Sheer
-Shily
-Short
-Shyly
-Silly
-Since
-Sleek
-Slyly
-Small
-So-So
-Sound
-Spang
-Stark
-Still
-Stone
-Stour
-Super
-Tally
-Tanto
-There
-Thick
-Tight
-Today
-Tomoz
-Truly
-Twice
-Under
-Utter
-Verry
-Wanly
-Wetly
-Where
-Wrong
-Wryly
-Abaft
-Aboon
-About
-Above
-Adown
-Afore
-After
-Along
-Among
-Below
-Circa
-Cross
-Minus
-Neath
-Round
-Since
-Under
-Until
-Aargh
-Adios
-Alack
-Aloha
-Basta
-Begad
-Bless
-Bravo
-Damme
-Frick
-Golly
-Gratz
-Hallo
-Havoc
-Hella
-Howay
-Howdy
-Hullo
-Huzza
-Jesus
-Kapow
-Loose
-Lordy
-Marry
-Plonk
-Skoal
-Sniff
-Sooey
-Thiam
-Thwap
-Viola
-Vivat
-Wacko
-Wahey
-Wilma
-Wirra
-Woops
-Wowie
-Yecch
-Yeeha
-Yeesh
-Yowch
-Zowie
+accurate (inaccurate): exact, without mistakes or errors
+accurately (inaccurately): correctly
+accuracy: the fact of being exact or correct
+alleviate: make easier to bear
+alleviation: relief
+assess: decide the value of something
+assessment: the process of testing, and making a judgment about, someone’s knowledge, ability, skills
+assessor: someone whose job is to judge or decide the amount, value, quality, or importance of something
+appreciate: to be thankful for
+appreciation: the act of recognizing or understanding that something is valuable, important, or as described
+context: words that come before and after a certain word or illustrate its meaning
+culture: Beliefs, customs, and traditions of a specific group of people.
+cultural (event): relating to the habits, traditions, and beliefs of a society
+cultured (uncutured) person: A cultured person has had a good education and knows a lot about art, music, literature
+culturally: in a way that relates to the habits, traditions, and beliefs of a society
+drawback: shortcoming, disadvantage
+electronics: the scientific study of electric current and the technology that uses it
+electronic: relating to computers or something that is done by computers
+electronically: using or involving an electronic device
+embarrass: to make (someone) feel confused in front of other people
+embarrassing: making feel ashamed, nervous, or uncomfortable
+embarrassed: feeling ashamed and uncomfortable
+embarrassment: a feeling of shame, or awkwardness
+estimate: to guess or calculate the cost, size, value, etc. of something
+estimated: roughly calculated or approximate
+estimation: a rough calculation of the value, number, quantity, or extent of something.
+equivalent: equal in value or meaning
+equivalence: the fact of having the same value, purpose, job, etc. as something else
